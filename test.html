@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard API Example</title>
+</head>
+<body>
+    <h1>Read Clipboard Data</h1>
+    <button id="readClipboard">Read Clipboard</button>
+    <p id="clipboardContent">Clipboard content will appear here...</p>
+
+    <script>
+        document.getElementById('readClipboard').addEventListener('click', async () => {
+            try {
+                const text = await navigator.clipboard.readText();
+                document.getElementById('clipboardContent').innerText = text;
+            } catch (err) {
+                console.error('Failed to read clipboard contents: ', err);
+            }
+        });
+    </script>
+</body>
+</html>

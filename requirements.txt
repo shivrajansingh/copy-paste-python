@@ -1,0 +1,9 @@
+pyautogui
+Pillow
+pytesseract
+mistralai 
+python-dotenv
+requests
+streamlit
+SpeechRecognition 
+pyaudio
